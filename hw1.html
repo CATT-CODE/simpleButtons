@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>HW1</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+			<p id="p1">0</p>
+	<script>
+		const buttonMaker = (text = 'Placeholder') => {
+			const btn = document.createElement('button');
+			btn.innerText = text;
+			document.body.appendChild(btn);
+			return btn;
+		};
+		</script>
+	<script>
+		let btn1 = buttonMaker('+1');
+		let btn2 = buttonMaker('+5');
+		let btn3 = buttonMaker('-1');
+		let btn4 = buttonMaker('-5');
+		let btn5 = buttonMaker('RESET');
+		</script>
+	<script>
+		let d = 0;
+		btn1.addEventListener('click', function() {
+				document.getElementById('p1').innerHTML = d+=1; 
+			});
+		btn2.addEventListener('click', function() {
+				document.getElementById('p1').innerText = d+=5; 
+			});
+		btn3.addEventListener('click', function() {
+				document.getElementById('p1').innerText = d-=1; 
+			});
+		btn4.addEventListener('click', function() {
+				document.getElementById('p1').innerText = d-=5; 
+			});
+		btn5.addEventListener('click', function() {
+				document.getElementById('p1').innerText = d=0;
+		})
+	</script>
+	</body>
+	</html>
